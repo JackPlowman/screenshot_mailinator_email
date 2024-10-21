@@ -14,3 +14,15 @@ updates:
       github-actions:
         patterns:
           - "*"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    commit-message:
+      prefix: "deps(python)"
+    schedule:
+      interval: "monthly"
+    target-branch: "main"
+    groups:
+      python:
+        patterns:
+          - "*"
