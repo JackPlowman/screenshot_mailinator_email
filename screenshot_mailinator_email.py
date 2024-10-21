@@ -12,12 +12,14 @@ def screenshot_mailinator_email() -> None:
             wait_until="load",
         )
         page.wait_for_timeout(2000)
+        print("Loading email pane")
         page.evaluate(
             "document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');"
         )
-        page.locator("#email_pane").screenshot(
-            path=f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_email.png"
-        )
+        print("Enlarging email pane")
+        file_name = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_email.png"
+        page.locator("#email_pane").screenshot(path=file_name)
+        print(f"Saved screenshot to {file_name}")
         browser.close()
 
 
