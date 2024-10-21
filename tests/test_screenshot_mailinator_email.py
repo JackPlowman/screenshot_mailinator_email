@@ -4,7 +4,7 @@ from unittest.mock import MagicMock
 
 
 @patch("sys.argv", ["https://mailinator.com"])
-@patch("playwright.sync_api.sync_playwright")
+@patch("screenshot_mailinator_email.screenshot_mailinator_email.sync_playwright")
 def test_screenshot_mailinator_email(_sync_playwright: MagicMock) -> None:
     # Act
     screenshot_mailinator_email()

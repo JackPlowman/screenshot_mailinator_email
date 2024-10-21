@@ -10,6 +10,7 @@ playwright = "1.48.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "0.7.0"
 vulture = "2.13"
+pytest = "^8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
