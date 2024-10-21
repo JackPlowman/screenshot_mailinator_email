@@ -1,6 +1,6 @@
-from ..screenshot_mailinator_email import screenshot_mailinator_email
-from unittest.mock import patch
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
+
+from screenshot_mailinator_email.screenshot_mailinator_email import screenshot_mailinator_email
 
 
 @patch("sys.argv", ["https://mailinator.com"])
