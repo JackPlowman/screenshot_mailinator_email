@@ -6,6 +6,10 @@
 install:
     poetry install
 
+# Run screenshot_mailinator_email.py script
+@run mailinator_url:
+    poetry run python screenshot_mailinator_email.py {{ mailinator_url }}
+
 # ------------------------------------------------------------------------------
 # Cleaning Commands
 # ------------------------------------------------------------------------------
@@ -37,19 +41,19 @@ ruff-fix:
 
 # Check for Ruff issues
 ruff-lint:
-    poetry run ruff check screenshot_mailinator_email
+    poetry run ruff check .
 
 # Fix Ruff lint issues
 ruff-lint-fix:
-    poetry run ruff check screenshot_mailinator_email --fix
+    poetry run ruff check . --fix
 
 # Check for Ruff format issues
 ruff-format:
-    poetry run ruff format --check screenshot_mailinator_email
+    poetry run ruff format --check .
 
 # Fix Ruff format issues
 ruff-format-fix:
-    poetry run ruff format screenshot_mailinator_email
+    poetry run ruff format .
 
 # ------------------------------------------------------------------------------
 # Other Python Tools
@@ -57,7 +61,7 @@ ruff-format-fix:
 
 # Check for unused code
 vulture:
-    poetry run vulture screenshot_mailinator_email
+    poetry run vulture .
 
 # ------------------------------------------------------------------------------
 # Prettier - File Formatting
