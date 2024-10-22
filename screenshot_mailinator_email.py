@@ -1,8 +1,8 @@
 from datetime import datetime
 from sys import argv
+from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
-from pytz import UTC
 
 
 def screenshot_mailinator_email() -> None:
@@ -18,7 +18,8 @@ def screenshot_mailinator_email() -> None:
         print("Loading email pane")
         page.evaluate("document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');")
         print("Enlarging email pane")
-        file_name = f"{datetime.now(tz=UTC).strftime('%Y-%m-%d_%H-%M-%S')}_email.png"
+        datetime_string = datetime.now(tz=ZoneInfo("Europe/London")).strftime("%Y-%m-%d_%H-%M-%S")
+        file_name = f"{datetime_string}_email.png"
         page.locator("#email_pane").screenshot(path=file_name)
         print(f"Saved screenshot to {file_name}")
         browser.close()
