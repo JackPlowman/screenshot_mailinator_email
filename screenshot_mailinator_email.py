@@ -1,9 +1,12 @@
-from playwright.sync_api import sync_playwright
 from datetime import datetime
 from sys import argv
 
+from playwright.sync_api import sync_playwright
+from pytz import UTC
+
 
 def screenshot_mailinator_email() -> None:
+    """Screenshot the email pane of mailinator.com."""
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
@@ -13,11 +16,9 @@ def screenshot_mailinator_email() -> None:
         )
         page.wait_for_timeout(2000)
         print("Loading email pane")
-        page.evaluate(
-            "document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');"
-        )
+        page.evaluate("document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');")
         print("Enlarging email pane")
-        file_name = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_email.png"
+        file_name = f"{datetime.now(tz=UTC).strftime('%Y-%m-%d_%H-%M-%S')}_email.png"
         page.locator("#email_pane").screenshot(path=file_name)
         print(f"Saved screenshot to {file_name}")
         browser.close()

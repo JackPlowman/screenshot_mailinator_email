@@ -5,4 +5,3 @@
 - Run unit tests in workflow
 - Add a readme
 - Add SonarCloud scanning
-- Add Ruff config
