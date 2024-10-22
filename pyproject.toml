@@ -6,7 +6,6 @@ package-mode = false
 python = "^3.13"
 poetry = "1.8.4"
 playwright = "1.48.0"
-pytz = "2024.2"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "0.7.0"
