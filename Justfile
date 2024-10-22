@@ -11,7 +11,7 @@ install:
     poetry run python screenshot_mailinator_email.py {{ mailinator_url }}
 
 unit-test:
-    poetry run pytest .
+    poetry run pytest . --cov=. --cov-report=xml
 
 # ------------------------------------------------------------------------------
 # Cleaning Commands
