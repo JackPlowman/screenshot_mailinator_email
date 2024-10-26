@@ -25,11 +25,13 @@ clean:
       -name '.mypy_cache' -o \
       -name '.pytest_cache' -o \
       -name '.ruff_cache' -o \
+      -name '.coverage' -o \
       -name '*.pyc' -o \
       -name '*.pyd' -o \
       -name '*.pyo' -o \
       -name 'coverage.xml' -o \
       -name 'db.sqlite3' \
+      -name '*.png' -o \
     \) -print | xargs rm -rfv
 
 # ------------------------------------------------------------------------------
