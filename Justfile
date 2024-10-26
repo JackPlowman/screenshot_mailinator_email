@@ -31,7 +31,7 @@ clean:
       -name '*.pyo' -o \
       -name 'coverage.xml' -o \
       -name 'db.sqlite3' \
-      -name '*.png' -o \
+      -name '*.png' \
     \) -print | xargs rm -rfv
 
 # ------------------------------------------------------------------------------
