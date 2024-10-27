@@ -1,4 +1,10 @@
 {
+  "ruff.configuration": "pyproject.toml",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
+  },
   "python.analysis.inlayHints.pytestParameters": true,
   "files.exclude": {
     ".ruff_cache": true,
