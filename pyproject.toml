@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "screenshot-mailinator-email"
+name = "screenshot_mailinator_email"
 package-mode = false
 
 [tool.poetry.dependencies]
