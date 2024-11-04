@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
@@ -52,9 +52,13 @@ jobs:
 
       - name: Check Python Code Quality (Ruff)
         run: just ruff-lint
+        env:
+          RUFF_OUTPUT_FORMAT: "github"
 
       - name: Check Python Code Format (Ruff)
         run: just ruff-format
+        env:
+          RUFF_OUTPUT_FORMAT: "github"
 
       - name: Check Python Code for Dead Code (Vulture)
         run: just vulture
@@ -64,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
@@ -82,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
