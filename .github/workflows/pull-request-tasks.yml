@@ -2,13 +2,7 @@ name: "Pull Request Checks"
 
 on:
   pull_request:
-    types:
-      [
-        opened,
-        edited,
-        synchronize,
-
-      ]
+    types: [opened, edited, synchronize]
 
 permissions:
   contents: read
