@@ -2,17 +2,8 @@ name: "Pull Request Tasks"
 
 on:
   pull_request:
-<<<<<<< HEAD
     types: [opened, edited, synchronize]
-=======
-    types:
-      [
-        opened,
-        edited,
-        synchronize,
 
-      ]
->>>>>>> 144549f (Refactor GitHub Workflows)
 
 permissions:
   contents: read
@@ -29,7 +20,6 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/other-configurations/labeller.yml
           sync-labels: true
-
       - name: Add Size Labels
         uses: pascalgn/size-label-action@v0.5.5
         env:
@@ -51,10 +41,5 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
-
       - name: Dependency Review
-<<<<<<< HEAD
         uses: actions/dependency-review-action@v4.5.0
-=======
-        uses: actions/dependency-review-action@v4.4.0
->>>>>>> 144549f (Refactor GitHub Workflows)
