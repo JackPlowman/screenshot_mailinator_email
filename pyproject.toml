@@ -8,7 +8,7 @@ poetry = "1.8.4"
 playwright = "1.48.0"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.7.2"
+ruff = "0.8.0"
 vulture = "2.13"
 pytest = "8.3.3"
 pytest-cov = "6.0.0"
