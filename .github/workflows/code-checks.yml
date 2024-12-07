@@ -146,12 +146,15 @@ jobs:
         uses: github/codeql-action/analyze@v3.27.6
 
   run-code-limit:
+    name: Run Code Limit
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v4.2.2
-      - name: "Run Code Limit"
-        uses: getcodelimit/codelimit-action@main
         with:
-          upload: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: "Run Code Limit"
+        uses: getcodelimit/codelimit-action@v1
