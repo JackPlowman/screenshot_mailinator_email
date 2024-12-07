@@ -19,7 +19,6 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/other-configurations/labeller.yml
           sync-labels: true
-
       - name: Add Size Labels
         uses: pascalgn/size-label-action@v0.5.5
         env:
@@ -41,6 +40,5 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
-
       - name: Dependency Review
         uses: actions/dependency-review-action@v4.5.0
