@@ -1,0 +1,44 @@
+{
+  "version": "0.11.3",
+  "uuid": "b43e0ef6-c457-44cb-870b-f10573a7200e",
+  "root": "/github/workspace",
+  "codebase": {
+    "totals": {
+      "Python": {
+        "files": 2,
+        "lines_of_code": 24,
+        "functions": 1,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      }
+    },
+    "tree": {
+      "./": {
+        "entries": [
+          "__init__.py",
+          "screenshot_mailinator_email.py"
+        ],
+        "profile": [0, 18, 0, 0]
+      }
+    },
+    "files": {
+      "__init__.py": {
+        "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+        "language": "Python",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "screenshot_mailinator_email.py": {
+        "checksum": "699797aeac5e84810c1417c77dd2f5b8",
+        "language": "Python",
+        "loc": 24,
+        "profile": [0, 18, 0, 0],
+        "measurements": [
+          {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 25, "column": 24}, "value": 18}
+        ]
+      }
+    }
+  }
+}
