@@ -1,7 +1,12 @@
 {
-  "version": "0.13.0",
-  "uuid": "258996aa-82f1-4ccb-b896-75e1f990d11f",
+  "version": "0.15.1",
+  "uuid": "13665c71-43fb-4816-b81d-1a483d062597",
   "root": "/github/workspace",
+  "repository": {
+    "owner": "JackPlowman",
+    "name": "screenshot_mailinator_email",
+    "branch": "HEAD"
+  },
   "codebase": {
     "totals": {
       "Python": {
