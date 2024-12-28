@@ -6,12 +6,13 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   labeller:
     name: Label Pull Request
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Label Pull Request
         uses: actions/labeler@v5.0.0
@@ -40,5 +41,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Dependency Review
         uses: actions/dependency-review-action@v4.5.0
