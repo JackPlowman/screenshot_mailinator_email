@@ -17,12 +17,9 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-line-length = 120
 target-version = "py313"
 
 [tool.ruff.lint]
-# Add the `line-too-long` rule to the enforced rule set.
-extend-select = ["E501"]
 select = ["ALL"]
 
 ignore = [
