@@ -39,9 +39,11 @@ jobs:
           VALIDATE_PYTHON_RUFF: false
           VALIDATE_PYTHON_PYINK: false
 
-  check-python-code-format-and-quality:
-    name: Check Python Code Format and Quality
+  run-python-code-checks:
+    name: Run Python Code Checks
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
