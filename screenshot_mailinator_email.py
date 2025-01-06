@@ -16,9 +16,13 @@ def screenshot_mailinator_email() -> None:
         )
         page.wait_for_timeout(2000)
         print("Loading email pane")
-        page.evaluate("document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');")
+        page.evaluate(
+            "document.getElementById('email_pane').setAttribute('style', 'height: 500%; width: 100%;');"  # noqa: E501
+        )
         print("Enlarging email pane")
-        datetime_string = datetime.now(tz=ZoneInfo("Europe/London")).strftime("%Y-%m-%d_%H-%M-%S")
+        datetime_string = datetime.now(tz=ZoneInfo("Europe/London")).strftime(
+            "%Y-%m-%d_%H-%M-%S"
+        )
         file_name = f"{datetime_string}_email.png"
         page.locator("#email_pane").screenshot(path=file_name)
         print(f"Saved screenshot to {file_name}")
