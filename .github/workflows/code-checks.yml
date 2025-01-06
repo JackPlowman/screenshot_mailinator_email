@@ -159,7 +159,7 @@ jobs:
         uses: github/codeql-action/analyze@v3.28.0
 
   run-code-limit:
-    name: Run Code Limit
+    name: Run CodeLimit
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -184,12 +184,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v5.1.0
-        with:
-          version: "latest"
+      - name: Setup Dependencies
+        uses: ./.github/actions/setup-python-dependencies
       - name: Run zizmor 🌈
-        run: uvx zizmor --format sarif . > results.sarif
+        run: poetry run zizmor --format sarif . > results.sarif
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file

@@ -7,10 +7,11 @@ python = "^3.13"
 playwright = "1.49.1"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.8.4"
+ruff = "0.8.6"
 vulture = "2.14"
 pytest = "8.3.4"
 pytest-cov = "6.0.0"
+zizmor = "1.0.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -31,11 +32,9 @@ ignore = [
   "T201"     # Ignore print statements
 ]
 
-# Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
 
-# Exclude a variety of commonly ignored directories.
 exclude = [
   ".bzr",
   ".direnv",
@@ -54,14 +53,13 @@ exclude = [
   "_build",
 ]
 
-# Allow unused variables when underscore-prefixed.
-dummy-variable-rgx = "(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.per-file-ignores]
 "**test_*.py" = ["S101", "D102", "D103", "SLF001", "PT019"]
 
 [tool.ruff.lint.pydocstyle]
-convention = "google" # Use Google docstring convention.
+convention = "google"
 
 [tool.vulture]
 ignore_names = ["side_effect"]
