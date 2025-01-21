@@ -13,6 +13,10 @@ install:
 unit-test:
     poetry run pytest . --cov=. --cov-report=xml
 
+# Validates Pyproject
+pyproject-check:
+    poetry check
+
 # ------------------------------------------------------------------------------
 # Cleaning Commands
 # ------------------------------------------------------------------------------
