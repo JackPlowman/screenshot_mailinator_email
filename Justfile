@@ -6,6 +6,10 @@
 install:
     poetry install
 
+# Install python dependencies for development
+install-all:
+    poetry install -E dev
+
 # Run screenshot_mailinator_email.py script
 @run mailinator_url:
     poetry run python screenshot_mailinator_email.py {{ mailinator_url }}
