@@ -74,7 +74,7 @@ ruff-format-fix:
 
 # Check for unused code
 vulture:
-    uv run vulture .
+    uv run vulture screenshot_mailinator_email.py
 
 # ------------------------------------------------------------------------------
 # Prettier - File Formatting
