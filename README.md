@@ -17,15 +17,15 @@ This is a simple Python script that will take a screenshot of an email on mailin
 
 ## Installation
 
-Install python dependencies with poetry.
+Install python dependencies with uv.
 
-`poetry install`
+`uv sync`
 
 ## Usage
 
 Run the script with the URL of the email you want to screenshot.
 
-`poetry run python screenshot_mailinator_email.py MAILINATOR_URL_HERE`
+`uv run python screenshot_mailinator_email.py MAILINATOR_URL_HERE`
 
 ## License
 
