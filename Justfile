@@ -4,22 +4,22 @@
 
 # Install python dependencies
 install:
-    poetry install
+    uv sync
 
 # Install python dependencies for development
 install-all:
-    poetry install -E dev
+    uv sync --extra dev
 
 # Run screenshot_mailinator_email.py script
 @run mailinator_url:
-    poetry run python screenshot_mailinator_email.py {{ mailinator_url }}
+    uv run python screenshot_mailinator_email.py {{ mailinator_url }}
 
 unit-test:
-    poetry run pytest . --cov=. --cov-report=xml
+    uv run pytest . --cov=. --cov-report=xml
 
 # Validates Pyproject
 pyproject-check:
-    poetry check
+    uv check
 
 # ------------------------------------------------------------------------------
 # Cleaning Commands
@@ -54,19 +54,19 @@ ruff-fix:
 
 # Check for Ruff issues
 ruff-lint:
-    poetry run ruff check .
+    uv run ruff check .
 
 # Fix Ruff lint issues
 ruff-lint-fix:
-    poetry run ruff check . --fix
+    uv run ruff check . --fix
 
 # Check for Ruff format issues
 ruff-format:
-    poetry run ruff format --check .
+    uv run ruff format --check .
 
 # Fix Ruff format issues
 ruff-format-fix:
-    poetry run ruff format .
+    uv run ruff format .
 
 # ------------------------------------------------------------------------------
 # Other Python Tools
@@ -74,7 +74,7 @@ ruff-format-fix:
 
 # Check for unused code
 vulture:
-    poetry run vulture .
+    uv run vulture screenshot_mailinator_email.py
 
 # ------------------------------------------------------------------------------
 # Prettier - File Formatting
