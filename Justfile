@@ -43,7 +43,7 @@ clean:
     \) -print | xargs rm -rfv
 
 # ------------------------------------------------------------------------------
-# Ruff - Python Linting and Formating
+# Ruff - Python Linting and Formatting
 # Set up ruff red-knot when it's ready
 # ------------------------------------------------------------------------------
 
@@ -51,6 +51,10 @@ clean:
 ruff-fix:
     just ruff-format-fix
     just ruff-lint-fix
+
+# Check for Ruff issues
+ruff-checks:
+    just ruff-lint ruff-format
 
 # Check for Ruff issues
 ruff-lint:
