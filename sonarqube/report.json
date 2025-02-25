@@ -1,18 +1,18 @@
 {
-  "version": "0.16.0",
-  "uuid": "d65dde19-a703-4dd0-882a-f69bca5375fc",
-  "timestamp": "2024-12-28T17:33:02+00:00",
+  "version": "0.18.1",
+  "uuid": "d7c9ad68-c654-444c-a373-46fd7cafa976",
+  "timestamp": "2025-02-25T14:21:41+00:00",
   "root": "/github/workspace",
   "repository": {
     "owner": "JackPlowman",
     "name": "screenshot_mailinator_email",
-    "branch": "HEAD"
+    "branch": "sonarqube"
   },
   "codebase": {
     "totals": {
       "Python": {
         "files": 2,
-        "lines_of_code": 18,
+        "lines_of_code": 22,
         "functions": 1,
         "hard_to_maintain": 0,
         "unmaintainable": 0
@@ -24,7 +24,7 @@
           "__init__.py",
           "screenshot_mailinator_email.py"
         ],
-        "profile": [0, 18, 0, 0]
+        "profile": [0, 22, 0, 0]
       }
     },
     "files": {
@@ -37,12 +37,12 @@
         ]
       },
       "screenshot_mailinator_email.py": {
-        "checksum": "699797aeac5e84810c1417c77dd2f5b8",
+        "checksum": "635ec5ea6fafbe7057df35f5a0349a91",
         "language": "Python",
-        "loc": 18,
-        "profile": [0, 18, 0, 0],
+        "loc": 22,
+        "profile": [0, 22, 0, 0],
         "measurements": [
-          {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 25, "column": 24}, "value": 18}
+          {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 29, "column": 24}, "value": 22}
         ]
       }
     }
