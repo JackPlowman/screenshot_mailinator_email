@@ -30,8 +30,8 @@ else
 fi
 
 # Run python checks
-if ! just -q ruff-check; then
-  echo "Warning: ruff-check command failed"
+if ! just -q ruff-checks; then
+  echo "Warning: ruff-checks command failed"
   exit 1
 else
   echo "just ruff checks passed"
