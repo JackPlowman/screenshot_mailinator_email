@@ -1,0 +1,50 @@
+{
+  "version": "0.18.1",
+  "uuid": "5bde3224-aa3c-4456-88a3-5c5a8c2bb39c",
+  "timestamp": "2025-03-03T01:13:47+00:00",
+  "root": "/github/workspace",
+  "repository": {
+    "owner": "JackPlowman",
+    "name": "screenshot_mailinator_email",
+    "branch": "dependabot/github_actions/dot-github/actions/setup-python-dependencies/main/github-actions-c11db551fe"
+  },
+  "codebase": {
+    "totals": {
+      "Python": {
+        "files": 2,
+        "lines_of_code": 22,
+        "functions": 1,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      }
+    },
+    "tree": {
+      "./": {
+        "entries": [
+          "screenshot_mailinator_email.py",
+          "__init__.py"
+        ],
+        "profile": [0, 22, 0, 0]
+      }
+    },
+    "files": {
+      "screenshot_mailinator_email.py": {
+        "checksum": "635ec5ea6fafbe7057df35f5a0349a91",
+        "language": "Python",
+        "loc": 22,
+        "profile": [0, 22, 0, 0],
+        "measurements": [
+          {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 29, "column": 24}, "value": 22}
+        ]
+      },
+      "__init__.py": {
+        "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+        "language": "Python",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      }
+    }
+  }
+}
