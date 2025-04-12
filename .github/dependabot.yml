@@ -5,8 +5,6 @@ updates:
     directories:
       - "/"
       - ".github/actions/setup-python-dependencies"
-    commit-message:
-      prefix: "deps(github-actions)"
     schedule:
       interval: "daily"
       time: "01:00"
@@ -22,8 +20,6 @@ updates:
 
   - package-ecosystem: "pip"
     directory: "/"
-    commit-message:
-      prefix: "deps(python)"
     schedule:
       interval: "daily"
       time: "01:00"
