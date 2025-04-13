@@ -78,16 +78,15 @@ ruff-format-fix:
 # Check for unused code
 vulture:
     uv run vulture screenshot_mailinator_email.py
-
 # ------------------------------------------------------------------------------
-# Prettier - File Formatting
+# Prettier
 # ------------------------------------------------------------------------------
 
-# Check for prettier issues
+# Check all files with prettier
 prettier-check:
     prettier . --check
 
-# Fix prettier issues
+# Format all files with prettier
 prettier-format:
     prettier . --check --write
 
@@ -95,20 +94,37 @@ prettier-format:
 # Justfile
 # ------------------------------------------------------------------------------
 
-# Format the Just code
+# Format Justfile
 format:
     just --fmt --unstable
 
-# Check for Just format issues
+# Check Justfile formatting
 format-check:
     just --fmt --check --unstable
 
 # ------------------------------------------------------------------------------
-# gitleaks
+# Gitleaks
 # ------------------------------------------------------------------------------
 
+# Run gitleaks detection
 gitleaks-detect:
-    gitleaks detect --source . > /dev/null
+    gitleaks detect --source .
+
+# ------------------------------------------------------------------------------
+# Lefthook
+# ------------------------------------------------------------------------------
+
+# Validate lefthook config
+lefthook-validate:
+    lefthook validate
+
+# ------------------------------------------------------------------------------
+# Zizmor
+# ------------------------------------------------------------------------------
+
+# Run zizmor checking
+zizmor-check:
+    zizmor .
 
 # ------------------------------------------------------------------------------
 # Git Hooks
@@ -116,6 +132,4 @@ gitleaks-detect:
 
 # Install pre commit hook to run on all commits
 install-git-hooks:
-    cp -f githooks/pre-commit .git/hooks/pre-commit
-    cp -f githooks/post-commit .git/hooks/post-commit
-    chmod ug+x .git/hooks/*
+    lefthook install -f
