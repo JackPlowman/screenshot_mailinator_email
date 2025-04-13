@@ -1,0 +1,50 @@
+{
+  "version": "0.18.1",
+  "uuid": "0b0afc07-3491-46e6-a69e-503e9420b7a0",
+  "timestamp": "2025-04-13T09:32:35+00:00",
+  "root": "/github/workspace",
+  "repository": {
+    "owner": "JackPlowman",
+    "name": "screenshot_mailinator_email",
+    "branch": "lefthook-validate"
+  },
+  "codebase": {
+    "totals": {
+      "Python": {
+        "files": 2,
+        "lines_of_code": 22,
+        "functions": 1,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      }
+    },
+    "tree": {
+      "./": {
+        "entries": [
+          "screenshot_mailinator_email.py",
+          "__init__.py"
+        ],
+        "profile": [0, 22, 0, 0]
+      }
+    },
+    "files": {
+      "screenshot_mailinator_email.py": {
+        "checksum": "635ec5ea6fafbe7057df35f5a0349a91",
+        "language": "Python",
+        "loc": 22,
+        "profile": [0, 22, 0, 0],
+        "measurements": [
+          {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 29, "column": 24}, "value": 22}
+        ]
+      },
+      "__init__.py": {
+        "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+        "language": "Python",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      }
+    }
+  }
+}
