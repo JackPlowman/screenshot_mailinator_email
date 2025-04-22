@@ -62,7 +62,7 @@ jobs:
           RUFF_OUTPUT_FILE: "ruff-results.sarif"
         continue-on-error: true
       - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.15
         with:
           sarif_file: ruff-results.sarif
       - name: Check Python Code Format (Ruff)
@@ -90,7 +90,7 @@ jobs:
       - name: Run Unit Tests
         run: just unit-test
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@0303d6b62e310685c0e34d0b9cde218036885c4d # v5.0.0
+        uses: SonarSource/sonarqube-scan-action@aa494459d7c39c106cc77b166de8b4250a32bb97 # v5.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -105,7 +105,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Check Markdown links
-        uses: UmbrellaDocs/action-linkspector@c6d4525e9f50b27a0e78fc42b537141058d034ef # v1.3.1
+        uses: UmbrellaDocs/action-linkspector@a0567ce1c7c13de4a2358587492ed43cab5d0102 # v1.3.4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           config_file: .github/other-configurations/.linkspector.yml
@@ -138,7 +138,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@0c5e2b8115b80b4c7c5ddf6ffdd634974642d182 # v5.4.1
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5.4.2
         with:
           version: "latest"
       - name: Run Lefthook Validate
