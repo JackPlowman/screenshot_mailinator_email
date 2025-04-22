@@ -89,8 +89,6 @@ jobs:
         uses: ./.github/actions/setup-python-dependencies
       - name: Run Unit Tests
         run: just unit-test
-      - name: Override Coverage Source Path for SonarCloud
-        run: sed -i "s/<source>\/home\/runner\/work\/screenshot_mailinator_email\/screenshot_mailinator_email<\/source>/<source>\/github\/workspace<\/source>/g" /home/runner/work/screenshot_mailinator_email/screenshot_mailinator_email/coverage.xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@0303d6b62e310685c0e34d0b9cde218036885c4d # v5.0.0
         env:
