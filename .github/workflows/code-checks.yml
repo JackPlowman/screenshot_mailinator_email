@@ -62,7 +62,7 @@ jobs:
           RUFF_OUTPUT_FILE: "ruff-results.sarif"
         continue-on-error: true
       - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.15
         with:
           sarif_file: ruff-results.sarif
       - name: Check Python Code Format (Ruff)
