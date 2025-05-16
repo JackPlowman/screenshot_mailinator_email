@@ -1,7 +1,7 @@
 {
   "version": "0.18.1",
-  "uuid": "7c22ff61-a0aa-472f-a149-ca8f5a89abe4",
-  "timestamp": "2025-05-16T21:35:03+00:00",
+  "uuid": "acfa6f5b-e185-45c5-adfc-e21e77b1b47f",
+  "timestamp": "2025-05-16T21:38:19+00:00",
   "root": "/github/workspace",
   "repository": {
     "owner": "JackPlowman",
@@ -21,21 +21,13 @@
     "tree": {
       "./": {
         "entries": [
-          "__init__.py",
-          "screenshot_mailinator_email.py"
+          "screenshot_mailinator_email.py",
+          "__init__.py"
         ],
         "profile": [0, 22, 0, 0]
       }
     },
     "files": {
-      "__init__.py": {
-        "checksum": "d41d8cd98f00b204e9800998ecf8427e",
-        "language": "Python",
-        "loc": 0,
-        "profile": [0, 0, 0, 0],
-        "measurements": [
-        ]
-      },
       "screenshot_mailinator_email.py": {
         "checksum": "635ec5ea6fafbe7057df35f5a0349a91",
         "language": "Python",
@@ -43,6 +35,14 @@
         "profile": [0, 22, 0, 0],
         "measurements": [
           {"unit_name": "screenshot_mailinator_email", "start": {"line": 8, "column": 1}, "end": {"line": 29, "column": 24}, "value": 22}
+        ]
+      },
+      "__init__.py": {
+        "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+        "language": "Python",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
         ]
       }
     }
