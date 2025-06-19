@@ -8,7 +8,7 @@ install:
 
 # Install python dependencies for development
 install-all:
-    uv sync --extra dev
+    uv sync --all-extras
 
 # Run screenshot_mailinator_email.py script
 @run mailinator_url:
@@ -16,10 +16,6 @@ install-all:
 
 unit-test:
     uv run pytest . --cov=. --cov-report=xml
-
-# Validates Pyproject
-pyproject-check:
-    uv check
 
 # ------------------------------------------------------------------------------
 # Cleaning Commands
@@ -44,19 +40,20 @@ clean:
 
 # ------------------------------------------------------------------------------
 # Ruff - Python Linting and Formatting
-# Set up ruff red-knot when it's ready
 # ------------------------------------------------------------------------------
 
 # Fix all Ruff issues
 ruff-fix:
-    just ruff-format-fix ruff-lint-fix
+    just ruff-format-fix
+    just ruff-lint-fix
 
-# Check for Ruff issues
+# Check for all Ruff issues
 ruff-checks:
-    just ruff-lint ruff-format
+    just ruff-format-check
+    just ruff-lint-check
 
 # Check for Ruff issues
-ruff-lint:
+ruff-lint-check:
     uv run ruff check .
 
 # Fix Ruff lint issues
@@ -64,12 +61,20 @@ ruff-lint-fix:
     uv run ruff check . --fix
 
 # Check for Ruff format issues
-ruff-format:
+ruff-format-check:
     uv run ruff format --check .
 
 # Fix Ruff format issues
 ruff-format-fix:
     uv run ruff format .
+
+# ------------------------------------------------------------------------------
+# Ty - Python Type Checking
+# ------------------------------------------------------------------------------
+
+# Check for type issues with Ty
+ty-check:
+    uv run ty check .
 
 # ------------------------------------------------------------------------------
 # Other Python Tools
@@ -78,6 +83,9 @@ ruff-format-fix:
 # Check for unused code
 vulture:
     uv run vulture screenshot_mailinator_email.py
+
+uv-lock-check:
+    uv lock --check
 
 # ------------------------------------------------------------------------------
 # Prettier
