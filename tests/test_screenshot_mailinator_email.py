@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock, patch
 
-from screenshot_mailinator_email.screenshot_mailinator_email import (
+from screenshot_mailinator_email.screenshot_mailinator_email import (  # type: ignore[import]
     screenshot_mailinator_email,
 )
 
