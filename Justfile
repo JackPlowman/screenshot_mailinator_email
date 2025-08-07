@@ -2,6 +2,10 @@
 # Common Commands
 # ------------------------------------------------------------------------------
 
+# Install project dependencies using asdf
+project-install:
+    asdf install
+
 # Install python dependencies
 install:
     uv sync
