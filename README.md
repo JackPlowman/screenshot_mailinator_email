@@ -59,4 +59,4 @@ Run the script with the URL of the email you want to screenshot.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT Licence. See the [LICENCE](LICENCE) file for details.
