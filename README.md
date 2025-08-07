@@ -19,8 +19,8 @@ This is a simple Python script that will take a screenshot of an email on mailin
 Clone the repository
 
 ```shell
-git clone https://github.com/NHSDigital/im1-pfs-auth.git
-cd im1-pfs-auth
+git clone https://github.com/NHSDigital/screenshot_mailinator_email.git
+cd screenshot_mailinator_email
 ```
 
 ### Prerequisites
