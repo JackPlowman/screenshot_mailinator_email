@@ -6,16 +6,46 @@ This is a simple Python script that will take a screenshot of an email on mailin
 
 - [Screenshot Mailinator Email](#screenshot-mailinator-email)
   - [Table of Contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Setup](#setup)
+    - [Prerequisites](#prerequisites)
+    - [Configuration](#configuration)
+      - [Additional Tools](#additional-tools)
+  - [Installation UV Dependencies](#installation-uv-dependencies)
   - [Usage](#usage)
   - [License](#license)
 
-## Prerequisites
+## Setup
 
-- Python 3.13
+Clone the repository
 
-## Installation
+```shell
+git clone https://github.com/NHSDigital/im1-pfs-auth.git
+cd im1-pfs-auth
+```
+
+### Prerequisites
+
+You need to have the following tools installed:
+
+- [asdf](https://asdf-vm.com/) version manager
+
+asdf will automatically install the required versions of Python and other dependencies.
+
+### Configuration
+
+Installation of the toolchain dependencies.
+
+```shell
+just project-install
+```
+
+#### Additional Tools
+
+You may want to install additional tools for development and linting.
+
+- [zizmor](https://github.com/zizmorcore/zizmor)
+
+## Installation UV Dependencies
 
 Install python dependencies with uv.
 
