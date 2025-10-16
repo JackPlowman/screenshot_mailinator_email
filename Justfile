@@ -132,12 +132,12 @@ lefthook-validate:
     lefthook validate
 
 # ------------------------------------------------------------------------------
-# Zizmor
+# Actionlint
 # ------------------------------------------------------------------------------
 
-# Run zizmor checking
-zizmor-check:
-    uvx zizmor . --persona=auditor
+# Run actionlint checks
+actionlint-check:
+    actionlint
 
 # ------------------------------------------------------------------------------
 # Pinact
@@ -154,6 +154,14 @@ pinact-check:
 # Run pinact update
 pinact-update:
     pinact run --update
+
+# ------------------------------------------------------------------------------
+# EditorConfig
+# ------------------------------------------------------------------------------
+
+# Check files format with EditorConfig
+editorconfig-check:
+    editorconfig-checker
 
 # ------------------------------------------------------------------------------
 # Git Hooks
