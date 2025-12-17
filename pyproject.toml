@@ -12,7 +12,7 @@ dev = [
   "pytest-cov==7.0.0",
   "ruff==0.14.0",
   "vulture==2.14",
-  "ty==0.0.1a21",
+  "ty==0.0.1a33",
 ]
 
 [tool.uv]
