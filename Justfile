@@ -8,11 +8,11 @@ project-install:
 
 # Install python dependencies
 install:
-    uv sync
+    uv sync --locked
 
 # Install python dependencies for development
 install-all:
-    uv sync --all-extras
+    uv sync --all-extras --locked
 
 # Run screenshot_mailinator_email.py script
 @run mailinator_url:
@@ -129,7 +129,7 @@ gitleaks-detect:
 
 # Run prek checking on all pre-commit config files
 prek-check:
-    find . -name "pre-commit-config.*" -exec prek validate-config -c {} \;
+    prek validate-config .pre-commit-config.yaml
 
 # ------------------------------------------------------------------------------
 # Actionlint
@@ -171,10 +171,6 @@ editorconfig-check:
 install-git-hooks:
     prek install
 
-# ------------------------------------------------------------------------------
-# Prek
-# ------------------------------------------------------------------------------
-
 # Update prek hooks and additional dependencies
 prek-update:
     just prek-update-hooks
@@ -195,4 +191,3 @@ prek-update-additional-dependencies:
 update:
     just pinact-update
     just prek-update
-    just prek-update-additional-dependencies
