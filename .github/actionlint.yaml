@@ -1,0 +1,6 @@
+# actionlint 1.7.12 does not yet recognize GitHub's self-repository action syntax.
+# Limit the compatibility exception to this repository's composite action.
+paths:
+  .github/workflows/code-checks.yml:
+    ignore:
+      - 'specifying action "\$/\.github/actions/setup-python-dependencies" in invalid format'
