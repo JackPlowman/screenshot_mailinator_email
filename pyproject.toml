@@ -1,26 +1,27 @@
 [project]
 name = "screenshot_mailinator_email"
 dynamic = ["version"]
-requires-python = "~=3.13.0"
+requires-python = "~=3.15.0"
 dependencies = [
-  "playwright==1.55.0"
+  "playwright==1.64.1",
+  "tzdata==2026.5; sys_platform == 'win32'",
 ]
 
 [project.optional-dependencies]
 dev = [
-  "pytest==8.4.2",
-  "pytest-cov==7.0.0",
-  "ruff==0.14.0",
-  "vulture==2.14",
-  "ty==0.0.1a21",
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "ruff==0.17.2",
+  "vulture==2.16",
+  "ty==0.0.91",
 ]
 
 [tool.uv]
-required-version = "~=0.9.0"
+required-version = "~=0.13.5"
 package = false
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py315"
 
 [tool.ruff.lint]
 select = ["ALL"]
@@ -45,3 +46,7 @@ convention = "google"
 
 [tool.vulture]
 ignore_names = ["side_effect"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+pythonpath = ["."]

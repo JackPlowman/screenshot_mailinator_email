@@ -19,7 +19,7 @@ This is a simple Python script that will take a screenshot of an email on mailin
 Clone the repository
 
 ```shell
-git clone https://github.com/NHSDigital/screenshot_mailinator_email.git
+git clone https://github.com/JackPlowman/screenshot_mailinator_email.git
 cd screenshot_mailinator_email
 ```
 
@@ -28,6 +28,7 @@ cd screenshot_mailinator_email
 You need to have the following tools installed:
 
 - [asdf](https://asdf-vm.com/) version manager
+- Python 3.15.1 and uv 0.13.5 (pinned in `.tool-versions`)
 
 asdf will automatically install the required versions of Python and other dependencies.
 
@@ -50,6 +51,11 @@ You may want to install additional tools for development and linting.
 Install python dependencies with uv.
 
 `uv sync`
+
+For development, run `uv sync --all-extras --locked`, then `just install-git-hooks`
+to install the prek checks. Run `prek run --all-files` to check the whole repository.
+
+Install the Chromium browser before taking screenshots: `uv run playwright install chromium`.
 
 ## Usage
 

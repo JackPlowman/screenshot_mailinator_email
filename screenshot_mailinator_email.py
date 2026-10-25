@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Jack Plowman
+
 from datetime import datetime
 from sys import argv
 from zoneinfo import ZoneInfo
